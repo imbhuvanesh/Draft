@@ -1,281 +1,181 @@
-Draft
-Smart Citizen Information Collection App
+# 📋 Draft
 
-Draft is a mobile application designed to collect and organize essential information from Indian citizens through a simple, step-by-step questionnaire.
+### Smart Citizen Information Collection App
 
-The app gathers personal, contact, address, identity, family, education, employment, banking, financial, and supporting document information in one structured place.
+Draft is a Flutter-based mobile application designed to collect and organize essential information through a simple, step-by-step questionnaire.
 
-✨ Features
-🧑 Personal information
-📞 Contact information
-🏠 Current & permanent address
-🪪 Government ID details
-👨‍👩‍👧 Family information
-🎓 Education details
-💼 Employment details
-🏦 Bank account information
-🧾 Financial information
-📄 Supporting document details
-📷 Photo & signature collection
-🔀 Conditional questions
-📋 Information review
-📑 PDF export
-🧠 Smart Questionnaire
+It brings personal details, contact information, addresses, identity documents, family information, education, employment, banking, and supporting documents together in one structured workflow.
 
-Draft uses conditional questions to avoid unnecessary fields.
+## ✨ Features
 
-For example:
+- 🧑 Personal information collection
+- 📞 Contact details and emergency contacts
+- 🏠 Current and permanent addresses
+- 🪪 Government identity document details
+- 👨‍👩‍👧 Family and dependent information
+- 🎓 Education details and qualifications
+- 💼 Employment and income information
+- 🏦 Banking information
+- 🧾 Financial and tax details
+- 📷 Photograph and signature collection
+- 🔀 Conditional questions
+- 📋 Information review before export
+- 📄 PDF document generation
 
-Do you have a Passport?
+## 🧠 Smart Questionnaire
 
-        ┌─────────┐
-        │   YES   │
-        └────┬────┘
-             ↓
-     Passport Details
+Draft uses conditional questions to make the information collection process simpler and more relevant.
 
+For example, if a user selects **Yes** when asked whether they have a passport, the app displays the passport details section. If they select **No**, the section is skipped.
 
-        ┌─────────┐
-        │   NO    │
-        └────┬────┘
-             ↓
-        Skip Section
+This approach reduces unnecessary questions and creates a smoother form-filling experience.
 
-This makes the form shorter and easier to complete.
+## 📋 Information Collected
 
-📋 Information Collected
-Personal Details
-Full Name
-Name as per official document
-Date of Birth
-Gender
-Place of Birth
-Father's Name
-Mother's Name
-Marital Status
-Nationality
-Photograph
-Identity Documents
-Aadhaar
-PAN
-Voter ID / EPIC
-Passport
-Driving Licence
-Ration Card
-Other Government ID
-Address
-Current Address
-Permanent Address
-House / Flat Number
-Street / Area
-Village / Town / City
-District
-State / UT
-PIN Code
-Address Proof
-Contact
-Mobile Number
-Alternate Mobile Number
-Email Address
-Emergency Contact
-Family
-Parents
-Spouse
-Children
-Dependents
-Education
-Highest Qualification
-Institution
-Course / Degree
-Specialization
-Year of Completion
-Percentage / CGPA
-Certificates
-Employment
-Employment Status
-Occupation
-Company / Organization
-Designation
-Work Address
-Work Experience
-Annual Income
-Banking
-Account Holder Name
-Bank Name
-Account Number
-IFSC Code
-Branch
-Account Type
-Financial
-PAN
-Income Source
-Annual Income
-Tax Information
-GSTIN, if applicable
-Supporting Documents
-Photograph
-Signature
-Identity Proof
-Address Proof
-Birth Certificate
-Educational Certificates
-Income Certificate
-Other Supporting Documents
-🔄 Application Flow
-        START
-          │
-          ▼
-   Personal Details
-          │
-          ▼
-   Contact Information
-          │
-          ▼
-    Address Details
-          │
-          ▼
-   Identity Documents
-          │
-          ▼
-     Family Details
-          │
-          ▼
-    Education Details
-          │
-          ▼
-   Employment Details
-          │
-          ▼
-      Bank Details
-          │
-          ▼
-   Financial Details
-          │
-          ▼
-  Supporting Documents
-          │
-          ▼
-       Review
-          │
-          ▼
-     Export as PDF
-🛠️ Tech Stack
-Technology	Usage
-Flutter	Application Framework
-Dart	Programming Language
-Material Design	UI
-Local Storage	Data Storage
-PDF	Document Export
-🔐 Privacy & Security
+| Category | Information |
+|---|---|
+| Personal | Name, date of birth, gender, nationality, and marital status |
+| Identity | Aadhaar, PAN, Voter ID, passport, driving licence, and other ID details |
+| Address | Current and permanent address, district, state, and PIN code |
+| Contact | Mobile number, email, and emergency contact |
+| Family | Parents, spouse, children, and dependents |
+| Education | Qualifications, institution, course, grades, and certificates |
+| Employment | Occupation, employer, designation, experience, and income |
+| Banking | Account holder, bank, account details, IFSC, and account type |
+| Financial | Income sources, tax information, and applicable GSTIN |
+| Documents | Photograph, signature, identity proof, address proof, and certificates |
 
-Draft can handle sensitive information such as government identification numbers and financial details.
+## 🔄 Application Workflow
 
-A production version should implement:
+1. Enter personal details.
+2. Provide contact information.
+3. Add current and permanent addresses.
+4. Enter identity document details.
+5. Complete family information.
+6. Add education and employment details.
+7. Provide banking and financial information.
+8. Attach supporting document details.
+9. Review the collected information.
+10. Export the information as a PDF.
 
-🔒 Encryption
-🔐 Secure authentication
-🗄️ Secure data storage
-🛡️ Access control
-🧹 Secure data deletion
-📄 Protected PDF files
-🚫 Minimal collection of sensitive information
+## 🛠️ Tech Stack
 
-Never use real Aadhaar, PAN, bank account numbers, or other sensitive personal information while testing or demonstrating the application.
+| Technology | Purpose |
+|---|---|
+| Flutter | Mobile application framework |
+| Dart | Programming language |
+| Material Design | User interface |
+| Local Storage | Data persistence |
+| PDF Generation | Document export |
 
-🚀 Future Improvements
+## 🚀 Getting Started
 
-Secure Authentication
+### Prerequisites
 
-Encrypted Local Storage
+Install the following tools:
 
-Cloud Backup
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- Dart SDK
+- Android Studio or Visual Studio Code
+- Android Emulator or a physical Android device
 
-Multiple Profiles
+### Installation
 
-OCR Document Scanning
+**1. Clone the repository**
 
-Automatic Form Filling
-
-Document Expiry Reminders
-
-Tamil Language Support
-
-Multi-language Support
-
-Dark Mode
-
-Biometric Authentication
-
-📂 Project Structure
-lib/
-│
-├── main.dart
-│
-├── models/
-│   └── user_model.dart
-│
-├── screens/
-│   ├── welcome_screen.dart
-│   ├── personal_details.dart
-│   ├── contact_details.dart
-│   ├── address_details.dart
-│   ├── identity_details.dart
-│   ├── family_details.dart
-│   ├── education_details.dart
-│   ├── employment_details.dart
-│   ├── bank_details.dart
-│   ├── financial_details.dart
-│   ├── documents.dart
-│   └── review_screen.dart
-│
-├── services/
-│   ├── storage_service.dart
-│   └── pdf_service.dart
-│
-└── widgets/
-    ├── custom_text_field.dart
-    ├── progress_indicator.dart
-    └── section_card.dart
-🚀 Getting Started
-Prerequisites
-
-Make sure you have:
-
-Flutter SDK
-Dart SDK
-Android Studio or VS Code
-Android Emulator or physical Android device
-Clone the Repository
+```bash
 git clone https://github.com/yourusername/draft.git
-Navigate to the Project
+```
+
+**2. Navigate to the project directory**
+
+```bash
 cd draft
-Install Dependencies
+```
+
+**3. Install dependencies**
+
+```bash
 flutter pub get
-Run the Application
+```
+
+**4. Run the application**
+
+```bash
 flutter run
-🤝 Contributing
+```
 
-Contributions are welcome!
+Replace `yourusername/draft` with the actual GitHub repository URL before using these commands.
 
-Fork the repository
-Create a new branch
-git checkout -b feature/your-feature
-Make your changes
-Commit your changes
-git commit -m "Add your feature"
-Push your branch
-git push origin feature/your-feature
-Open a Pull Request
-📄 License
+## 🔐 Privacy and Security
 
-This project is currently intended for educational and development purposes.
+Draft is designed to handle information that may include sensitive identity and financial details. Such data must be handled carefully.
 
-👨‍💻 Developer
+Before using the application with real citizen information, implement and verify appropriate safeguards:
 
-Bhuvanesh
+- 🔒 Encryption for sensitive data
+- 🔐 Secure authentication
+- 🗄️ Protected local storage
+- 🛡️ Access control
+- 🧹 Secure data deletion
+- 📄 Protection for exported PDF files
+- 🚫 Minimal collection of sensitive information
 
-Built with Flutter.
+**Important:** Do not use real Aadhaar numbers, PAN details, bank account information, or other sensitive personal data during development, testing, or demonstrations.
 
-Draft
+Collect only the information necessary for the intended purpose, obtain appropriate consent, and follow applicable privacy and data protection requirements.
 
-Collect information. Organize everything. Export it as a PDF.
+## 🗺️ Future Improvements
+
+- Secure authentication
+- Encrypted local storage
+- Secure cloud backup
+- Multiple user profiles
+- OCR-based document scanning
+- Automatic form filling
+- Document expiry reminders
+- Tamil language support
+- Additional Indian languages
+- Dark mode
+- Biometric authentication
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. Make your changes.
+4. Commit your changes:
+
+   ```bash
+   git add .
+   git commit -m "Add your feature"
+   ```
+
+5. Push your branch:
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+6. Open a Pull Request.
+
+## 📄 License
+
+This project is intended for educational and development purposes. A formal open-source license has not yet been specified.
+
+## 👨‍💻 Developer
+
+**Bhuvanesh**
+
+Built with Flutter and Dart.
+
+---
+
+*Draft: Collect information. Organize everything. Export it as a PDF.* 📋
